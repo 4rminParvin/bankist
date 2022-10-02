@@ -1,0 +1,315 @@
+.flex-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    background-color: #7b8888;
+}
+
+header {
+    margin: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.login--message,
+.header,
+.login {
+    grid-row: 1 / 2;
+}
+
+.header {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.headers {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.logo {
+    width: 10rem;
+    grid-column: 1 / 2;
+}
+
+.login {
+    grid-column: 3 / 4;
+    text-align: center;
+    display: flex;
+    gap: 0.25rem;
+    
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    grid-row: 1 / 2;
+    align-self: end;
+}
+
+.slogan {
+    font-size: 2rem;
+    grid-row: 2 / 3;
+}
+
+.login--message {
+    grid-column: 1 / 2;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.login input,
+.login--btn {
+    border: #7d869c 0 solid;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.login--btn {
+    cursor: pointer;
+    border: #7d869c 2px solid;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border: black 1px solid;
+    outline: none;
+    background-color: #e5e8b6;
+    transform: translate(0, -5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+}
+
+.login--btn:focus {
+    border: black 1px solid;
+    outline: none;
+    background-color: #b4c4ae;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+}
+
+.login--btn:active {
+    background-color: #b4c4ae;
+    transform: translate(0, 5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transition: all 0.1s;
+}
+
+.login p {
+    margin-top: 1rem;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.main-app {
+    display: none;
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+}
+
+.balance--label,
+.date--label {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.movements-list,
+.summary,
+.balance {
+    grid-column: 1 / 2;
+}
+
+.operations,
+.logout--message,
+.date {
+    grid-column: 2 / 3;
+}
+
+.operations {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    width: 100%;
+}
+
+.operation {
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+    padding: 2rem 1rem 3rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(100px);
+}
+
+.operation input::placeholder {
+    font-weight: bold;
+    color: #567;
+}
+
+.--transfer {
+    background-image: linear-gradient(
+        165deg,
+        rgba(255, 255, 63, 0.654),
+        rgba(255, 153, 0, 0.651)
+    );
+}
+
+.--request {
+    background-image: linear-gradient(
+        165deg,
+        rgba(159, 255, 210, 0.514),
+        rgba(9, 255, 0, 0.651)
+    );
+}
+
+.--close {
+    background-image: linear-gradient(
+        165deg,
+        rgba(255, 63, 175, 0.49),
+        rgba(255, 0, 0, 0.815)
+    );
+}
+
+.operation form input {
+    outline: none;
+    border-width: 0;
+    padding: 0.75rem 0 0.75rem 0.75rem;
+    padding-left: 0.5rem;
+    margin: 0.25rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(100px);
+}
+
+.operation input:focus {
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s ease-in-out;
+}
+
+.operation h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.operation form {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+}
+
+.operation form input {
+    min-width: 0;
+    flex-grow: 100;
+}
+
+.operation form button {
+    flex-grow: 1;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.movements-list {
+    height: 35rem;
+    overflow-y: scroll;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(100px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.movement {
+    border-radius: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+}
+
+.--deposit .mov--number-type {
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(25, 161, 25);
+    padding: 0.5rem;
+    border-radius: 30px;
+}
+
+.--withdrawal .mov--number-type {
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(161, 25, 25);
+    padding: 0.5rem;
+    border-radius: 30px;
+}
+
+.--deposit .mov--amount,
+.--withdrawal .mov--amount {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+.summaries {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+}
+
+.sort--btn {
+    justify-self: end;
+    width: 2rem;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer span {
+    font-size: 2rem;
+    font-weight: bold;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bankist</title>
+  <link rel="stylesheet" href="Styles/reset.css" />
+  <link rel="stylesheet" href="Styles/styles.css" />
+  <link rel="shortcut icon" href="./Resources/favicon.svg" type="image/x-icon" />
+  <script src="./JS/script.js" defer></script>
+</head>
+
+<body>
+  <div class="flex-wrapper">
+    <header>
+      <div class="login">
+        <form class="login-form">
+          <input type="text" name="username--input" class="username--input" placeholder="Username" />
+          <input type="password" name="password--input" class="password--input" placeholder="Password" maxlength="4" />
+          <button class="login--btn">Log in!</button>
+        </form>
+      </div>
+      <div class="header">
+        <img src="./Resources/favicon.svg" alt="Logo" class="logo" />
+        <div class="headers">
+          <h1>Bankist</h1>
+          <h2 class="slogan">minimal bank</h2>
+        </div>
+      </div>
+      <h2 class="login--message">Log in to get started!</h2>
+    </header>
+
+    <main>
+      <div class="main-app">
+        <div class="main-grid">
+          <div class="balance">
+            <p class="balance--label">
+              Current Balance <br /><span class="balance--value"></span>
+            </p>
+          </div>
+          
+          <div class="date">
+            <p class="date--label">
+              As of <br /><span class="date--value"></span>
+            </p>
+          </div>
+          
+          <div class="movements-list">
+            
+          </div>
+          <div class="operations">
+            <div class="operation --transfer">
+              <h2>Transfer Money</h2>
+              <form class="form--transfer">
+                <input type="number" name="transfer--amount--input" class="transfer--amount--input" placeholder="Amount">
+                <input type="text" name="transfer--to--input" class="transfer--to--input" placeholder="Transfer to">
+                <button class="submit transfer--btn">Submit</button>
+              </form>
+            </div>
+            
+            <div class="operation --request">
+              <h2>Request Loan</h2>
+              <form class="form--request">
+                <input type="number" name="request--input" class="request--input" placeholder="Amount">
+                <button class="submit request--btn">Submit</button>
+              </form>
+            </div>
+            
+            <div class="operation --close">
+              <h2>Close Account</h2>
+              <form class="form--close">
+                <input type="text" name="confirm--username--input" class="confirm--username--input" placeholder="Username">
+                <input type="password" name="confirm--password--input" class="confirm--password--input" placeholder="Password">
+                <button class="submit close--btn">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="summary">
+            <div class="summaries">
+              <div class="input--summary">
+                <p>IN: <span class="summary--input--val"></span></p>
+              </div>
+              <div class="output--summary">
+                <p>OUT: <span class="summary--output--val"></span></p>
+              </div>
+              <div class="interest--summary">
+                <p>INTEREST: <span class="summary--interest--val"></span></p>
+              </div>
+            </div>
+            <button class="sort--btn">&darr;</button>
+          </div>
+          <div class="logout--message">
+            <p>
+              You will be logged out in
+              <span class="logout--timer"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>Armin Parvin</span>
+    </footer>
+  </div>
+</body>
+
+</html>
